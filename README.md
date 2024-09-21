@@ -20,3 +20,15 @@ git clone -b vim https://github.com/JiuYu77/vim-conf.git ~/
 git clone -b neovim-lua https://github.com/JiuYu77/vim-conf.git ~/.config/nvim/
 ```
 
+# Attention
+## clangd
+
+## nodejs
+
+## ctags
+
+## silversearcher-ag
+
+## Nerd Fonts
+主要用于解决图标乱码。
+
