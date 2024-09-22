@@ -13,7 +13,7 @@ git clone -b neovim-lua https://github.com/JiuYu77/vim-conf.git path/neovim-lua
 ## vim
 ```shell
 git clone -b vim https://github.com/JiuYu77/vim-conf.git ~/
-rm -rf .git
+rm -rf ~/.git
 ```
 
 ## neovim
