@@ -183,7 +183,7 @@ syntax on
 "高亮显示所有的匹配短语
 set hlsearch
 
-"折叠设置"
+"折叠设置; 符号: + 和 -; 可通过“鼠标”进行展开 或 折叠
 set foldenable
 "set nofoldenable "禁用代码折叠
 set foldmethod=manual
