@@ -24,6 +24,7 @@ source ~/.vim/vim-plugin.conf
 " bdelete   bd
 " bwipeout  bwipe
 nmap <Leader>b :bn<CR>
+nmap bd :bd<CR>
 
 "******************************************************************************************"
 "终端 term  terminal
@@ -181,8 +182,12 @@ set cin
 syntax on
 "高亮显示所有的匹配短语
 set hlsearch
+
 "折叠设置"
+set foldenable
+"set nofoldenable "禁用代码折叠
 set foldmethod=manual
+set foldcolumn=1
 
 
 "*****************************************************************
