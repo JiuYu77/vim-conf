@@ -249,7 +249,7 @@ endfunc
 func! RemovePairs()
 	let l:line = getline(".") " 取得当前行
 	let l:current_char = l:line[col(".")-1] " 取得当前光标字符
-	let l:previous_char = l:line[col(".")-2] " 取得光标前一个字符 
+	let l:previous_char = l:line[col(".")-2] " 取得光标前一个字符
 
 	if (l:previous_char == '"' || l:previous_char == "'") && l:previous_char == l:current_char
 		return "\<delete>\<bs>"
