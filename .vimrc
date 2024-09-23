@@ -136,13 +136,17 @@ set cursorline
 
 " 显示换行、空格
 set list
-"显示空格和Tab键"
-set listchars=tab:>-,trail:-
+"设置显示样式: eol(行尾)  tab(Tab键, 制表符)  trail(尾部空格)  extends(换行符)  precedes(换行符)
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+" 在保存文件时自动删除尾部空格
+autocmd BufWritePre * %s/\s\+$//e
+
 
 "启用鼠标"
 set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
+
 
 "显示括号匹配"
 set showmatch
