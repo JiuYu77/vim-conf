@@ -11,6 +11,8 @@ git clone -b neovim-lua https://github.com/JiuYu77/vim-conf.git path/neovim-lua
 
 ```shell
 git clone git@github.com:JiuYu77/vim-conf.git
+
+git checkout vim  # git switch vim
 ```
 
 # Installation
