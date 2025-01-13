@@ -30,12 +30,15 @@ git clone -b neovim-lua https://github.com/JiuYu77/vim-conf.git ~/.config/nvim/
 
 # Attention
 ## clangd
+语法检查。
 
 ## nodejs
 
 ## ctags
+源码追踪。
 
 ## silversearcher-ag
+搜索。
 
 ## Nerd Fonts
 主要用于解决图标乱码。
