@@ -9,6 +9,10 @@ git clone -b vim https://github.com/JiuYu77/vim-conf.git path/vim
 git clone -b neovim-lua https://github.com/JiuYu77/vim-conf.git path/neovim-lua
 ```
 
+```shell
+git clone git@github.com:JiuYu77/vim-conf.git
+```
+
 # Installation
 ## vim
 ```shell
