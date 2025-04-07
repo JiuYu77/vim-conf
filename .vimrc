@@ -28,11 +28,13 @@ nmap bd :bd<CR>
 
 "******************************************************************************************"
 "终端 term  terminal
-nmap tt :terminal ++rows=20<CR> "水平term, 20 行
-nmap vt :vertical terminal ++cols=100<CR> "垂直term, 100 列
+"水平term, 20 行
+nmap tt :terminal ++rows=20<CR>
+"垂直term, 100 列
+nmap vt :vertical terminal ++cols=100<CR>
 
-
-" 分割出的新窗口的位置。包括终端位置
+"******************************************************************************************"
+"分割出的新窗口的位置。包括终端位置
 set splitbelow "下方, 默认为上方
 set splitright "右侧, 默认为左侧
 
