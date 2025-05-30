@@ -154,18 +154,15 @@ set selectmode=mouse,key
 set showmatch
 
 
-"设置Tab制表符长度为4个空格"
-set tabstop=4
-"设置自动缩进长度为4空格"
-set shiftwidth=4
-"软制表符宽度为4"
-set softtabstop=4
+
+set tabstop=4      "设置Tab制表符长度为4个空格
+set shiftwidth=4   "设置自动缩进长度为4空格
+set softtabstop=4  "软制表符宽度为4 (Tab键插入 4空格)
+set expandtab      "关键：将 Tab 转换为空格; 临时取消转换：set noexpandtab
 
 "设置缩进"
-"自动缩进,继承前一行的缩进方式，适用于多行注释"
-set autoindent
-"自动缩进，可能是set autoindent的缩写
-"set ai
+set autoindent  "自动缩进,继承前一行的缩进方式，适用于多行注释"
+"set ai          "自动缩进，可能是set autoindent的缩写
 
 set cindent
 
