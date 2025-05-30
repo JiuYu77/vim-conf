@@ -154,7 +154,7 @@ set selectmode=mouse,key
 set showmatch
 
 
-
+"Tab
 set tabstop=4      "设置Tab制表符长度为4个空格
 set shiftwidth=4   "设置自动缩进长度为4空格
 set softtabstop=4  "软制表符宽度为4 (Tab键插入 4空格)
