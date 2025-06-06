@@ -30,6 +30,12 @@ git clone -b neovim-lua https://github.com/JiuYu77/vim-conf.git ~/.config/nvim/
 
 # vim Attention
 
+`科学上网`，才可以更顺利的安装各种`插件`。
+
+`settings/vim-plugin.vim` 中放置了要安装的插件，部分插件`注释`掉了，可以根据需要**取消**注释 或 增加其他插件。
+
+`settings/map.vim` 中是部分**按键**映射。
+
 ## vim9 需要 ncurses
 apt search ncurses 查询有哪些可以安装的 ncurses 版本，如 libncurses5-dev：
 ```shell
