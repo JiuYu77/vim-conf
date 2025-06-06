@@ -28,11 +28,23 @@ rm -rf ~/vim
 git clone -b neovim-lua https://github.com/JiuYu77/vim-conf.git ~/.config/nvim/
 ```
 
-# Attention
+# vim Attention
+
+## vim9 需要 ncurses
+apt search ncurses 查询有哪些可以安装的 ncurses 版本，如 libncurses5-dev：
+```shell
+sudo apt-get install libncurses5-dev
+```
+
 ## clangd
 语法检查。
 
-## nodejs
+[clangd GitHub](https://github.com/clangd/clangd)
+
+## node
+node 即 node.js。
+
+[Node.js官网](https://nodejs.org/)
 
 ## ctags
 源码追踪。Universal Ctags
@@ -48,6 +60,16 @@ sudo apt install universal-ctags
 ## silversearcher-ag
 搜索。
 
+[the_silver_searcher Github](https://github.com/ggreer/the_silver_searcher)
+
+[silversearcher-ag 镜像仓库](https://mirrors.cqupt.edu.cn/deepin/pool/main/s/silversearcher-ag/)
+
+```shell
+sudo apt install silversearcher-ag
+```
+
 ## Nerd Fonts
 主要用于解决图标乱码。
+
+[Nerd Fonts 官网](https://www.nerdfonts.com/)
 
