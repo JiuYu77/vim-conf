@@ -48,23 +48,33 @@ function DoOneFileMake()
     if(expand("%:p:h")!=getcwd())
         echohl WarningMsg | echo "Fail to make! This file is not in the current dir! Press redirect to the dir of this file."
     endif
-    exec "w"
+    "exec "w"
 	call SetCompilation()
 
 endfunction
 function SetCompilation()
-    if &filetype=='c'
-        set makeprg=gcc\ %\ -o\ %<
-		exec "make"
-		exec '!time ./%<'
-		exec "copen"
-    elseif &filetype=='cpp'
-        set makeprg=g++\ %\ -o\ %<
-		exec "make"
-		exec '!time ./%<'
-		exec "copen"
-    elseif &filetype=='python'
-		exec "!time python3 %"
+    if !empty(globpath(&runtimepath, 'plugin/asyncrun.vim'))
+        if &filetype=='c'
+            AsyncRun gcc % -o %< && ./%<
+        elseif &filetype=='cpp'
+            AsyncRun g++ % -o %<
+        elseif &filetype=='python'
+            AsyncRun python3 %
+        endif
+    else
+        if &filetype=='c'
+            set makeprg=gcc\ %\ -o\ %<
+            exec "make"
+            exec '!time ./%<'
+            exec "copen"
+        elseif &filetype=='cpp'
+            set makeprg=g++\ %\ -o\ %<
+            exec "make"
+            exec '!time ./%<'
+            exec "copen"
+        elseif &filetype=='python'
+            exec "!time python3 %"
+        endif
     endif
 endfunction
 
