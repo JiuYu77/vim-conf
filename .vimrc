@@ -8,12 +8,11 @@ set smoothscroll
 
 "------------------------------------------------------------------------------------------"
 " ctrl+p 前一个，ctrl+n 后一个，ctrl+y确认，ctrl+e取消补全
-" <leader>键默认是 \，反斜杠"
-let mapleader=" " "将leader键重新映射为空格
 
 "------------------------------------------------------------------------------------------"
 " source 加载其他配置文件
-source ~/.vim/vim-plugin.conf
+source ~/.vim/settings/vim-plugin.vim
+source ~/.vim/settings/maps.vim
 
 "******************************************************************************************"
 " buffer 缓冲区
@@ -23,15 +22,9 @@ source ~/.vim/vim-plugin.conf
 " bfirst bf 和 blast bl
 " bdelete   bd
 " bwipeout  bwipe
-nmap <Leader>b :bn<CR>
-nmap bd :bd<CR>
 
 "******************************************************************************************"
 "终端 term  terminal
-"水平term, 20 行
-nmap tt :terminal ++rows=20<CR>
-"垂直term, 100 列
-nmap vt :vertical terminal ++cols=100<CR>
 
 "******************************************************************************************"
 "分割出的新窗口的位置。包括终端位置
@@ -49,80 +42,8 @@ set splitright "右侧, 默认为左侧
 "修改QuickFix窗口显示的最大条目数
 let g:ctrlp_max_height = 15
 
-"compile c c++ file in quickfix  makeprg
-nmap <F4> :call DoOneFileMake()<CR>
-function DoOneFileMake()
-    if(expand("%:p:h")!=getcwd())
-        echohl WarningMsg | echo "Fail to make! This file is not in the current dir! Press redirect to the dir of this file."
-    endif
-    exec "w"
-	call SetCompilation()
-
-endfunction
-function SetCompilation()
-    if &filetype=='c'
-        set makeprg=gcc\ %\ -o\ %<
-		exec "make"
-		exec '!time ./%<'
-		exec "copen"
-    elseif &filetype=='cpp'
-        set makeprg=g++\ %\ -o\ %<
-		exec "make"
-		exec '!time ./%<'
-		exec "copen"
-    elseif &filetype=='python'
-		exec "!time python3 %"
-    endif
-endfunction
-
-" F3 关闭quickfix窗口
-nnoremap <F3> :cclose<CR>
-" F5 设置为:w :make :copen快捷键, 保存文件(加上:w操作，会有问题，所以去掉了)-->编译程序,执行Makefile文件-->打开Quickfix查看相关信息
-nmap  <F5> :make<CR><CR><CR>:copen<CR>
-" 运行程序
-nmap <F6> :make run<CR><CR><cr>:copen<cr>
-
 "******************************************************************************************"
-"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-"在vim中加入文件署名和时间,,快捷键 <F2>
-map <F2> ms:call AddAuthor()<cr>'s
-function AddAuthor()
-    let n=1
-    while n < 5
-        let line = getline(n)
-        if line =~'^\s*\*\s*\S*Last\s*modified\s*:\s*\S*.*$'
-            call UpdateTitle()
-            return
-        endif
-        let n = n + 1
-    endwhile
-    call AddTitle()
-endfunction
 
-function UpdateTitle()
-    normal m'
-    execute '/* Last modified\s*:/s@:.*$@\=strftime(": %Y-%m-%d %H:%M")@'
-    normal "
-    normal mk
-    execute '/* Filename\s*:/s@:.*$@\=": ".expand("%:t")@'
-    execute "noh"
-    normal 'k
-    echohl WarningMsg | echo "Successful in updating the copy right." | echohl None
-endfunction
-
-function AddTitle()
-    call append(0,"/**********************************************************")
-    call append(1,"* Author        : 名字")
-    call append(2,"* Email         : 邮箱")
-    call append(3,"* Last modified : ".strftime("%Y-%m-%d %H:%M"))
-    call append(4,"* Filename      : ".expand("%:t"))
-    call append(5,"* Description   : ")
-    call append(6,"**********************************************************/")
-    echohl WarningMsg | echo "Successful in adding the copyright." | echohl None
-endfunction
-"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
-
-"******************************************************************************************"
 "设置编码"
 set fileencodings=utf-8,ucs-bom,gb1800,gbk,gb2312,cp936
 set termencoding=utf-8
@@ -290,4 +211,3 @@ endfunc
 "自动提示,preview:是默认值，会自动选择第一个提示词；noselect:不自动选择第一个提示词
 "set completeopt=preview,menu
 "上面一句是Vim的默认设置,不用添加，如果要使用noselect则要添加这一句，并将preview改为noselect
-
