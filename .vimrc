@@ -117,7 +117,7 @@ set foldcolumn=1
 "*****************************************************************
 " 仅对指定文件格式设置自动补全功能
 autocmd FileType c,cpp,sh,java,html,js,css,python exec AutoComplete()
-"自动补全括号，双引号，单引号
+"自动补 全括号，双引号，单引号
 func! AutoComplete()
     "相关映射
     :inoremap ( ()<Left>
