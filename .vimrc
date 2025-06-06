@@ -12,7 +12,7 @@ set smoothscroll
 "------------------------------------------------------------------------------------------"
 " source 加载其他配置文件
 source ~/.vim/settings/vim-plugin.vim
-source ~/.vim/settings/maps.vim
+source ~/.vim/settings/map.vim
 
 "******************************************************************************************"
 " buffer 缓冲区
