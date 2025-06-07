@@ -127,7 +127,7 @@ sudo apt install silversearcher-ag
 
 该方法 可安装满足 `coc-clangd`要求版本的`clangd`，但 需要科学上网，且挂了梯子，速度也不一定好。
 
-1. 方法2
+2. 方法2
 ```shell
 sudo apt install clangd-19
 ```
@@ -143,7 +143,7 @@ shell中执行 `vim` 命令，`coc.nvim` 会提示需要的 `clangd` 版本，�
 ```plaintext
 [coc.nvim] clangd was not found on your PATH. :CocCommand clangd.install will install 19.1.2.
 ```
-1. 方法3
+3. 方法3
 - Github下载压缩包<br/>
 [clangd 官网  有 GitHub地址](https://clangd.llvm.org/installation)
 - 解压
