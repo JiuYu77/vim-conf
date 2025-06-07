@@ -214,8 +214,8 @@ endfunc
 
 "------------------------------------------------------------------------------------------"
 " source 加载其他配置文件
-source ~/.vim/settings/vim-plugin.vim
 source ~/.vim/settings/map.vim
+source ~/.vim/settings/vim-plugin.vim
 
 
 "---- 注释颜色 ----
