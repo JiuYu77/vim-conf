@@ -18,7 +18,7 @@ endfunction
 
 function UpdateTitle()
     normal m'
-    execute '/* Last modified\s*:/s@:.*$@\=strftime(": %Y-%m-%d %H:%M")@'
+    execute '/* Last modified\s*:/s@:.*$@\=strftime(": %Y-%m-%d %H:%M:%S")@'
     normal "
     normal mk
     execute '/* Filename\s*:/s@:.*$@\=": ".expand("%:t")@'
@@ -39,8 +39,23 @@ function AddTitle()
 endfunction
 
 
-" F3 关闭quickfix窗口
-nnoremap <F3> :cclose<CR>
+" Toggle Quickfix window with <F3>
+nnoremap <F3> :call ToggleQuickfix()<CR>
+function! ToggleQuickfix()
+  let l:quickfix_open = 0
+  for win in range(1, winnr('$'))
+    if getwinvar(win, '&buftype') ==# 'quickfix'
+      let l:quickfix_open = 1
+      break
+    endif
+  endfor
+  if l:quickfix_open
+    cclose
+  else
+    copen
+  endif
+endfunction
+
 
 "compile c c++ file in quickfix  makeprg
 nmap <F4> :call DoOneFileMake()<CR>
