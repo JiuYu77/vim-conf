@@ -1,23 +1,48 @@
 " 插件及插件配置
 call plug#begin('~/.vim/plugged')
+"--------------
+" Color Schemes
+"--------------
 Plug 'ghifarit53/tokyonight-vim'
+
+"---- statusline ----
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+"---- icon ----
+Plug 'ryanoasis/vim-devicons'
+
+"--- async ----
+Plug 'skywind3000/asyncrun.vim'
+
+"--------------
+" IDE features
+"--------------
 Plug 'preservim/nerdtree'
+Plug 'preservim/tagbar'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
 Plug 'easymotion/vim-easymotion'
-Plug 'preservim/tagbar'
+
+"---- 智能代码提示 (自动补全) ----
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"---- 语法检查 ----
 "Plug 'dense-analysis/ale'
+
+"---- Git ----
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ryanoasis/vim-devicons'
-Plug 'skywind3000/asyncrun.vim'
+
+"---- code snippet ----
 "Plug 'honza/vim-snippets'
+
+"--- 彩虹括号 ----
 "Plug 'frazrepo/vim-rainbow' "会导致vim-devicons不正常
+
+"---- 注释 ----
 "Plug 'preservim/nerdcommenter'
 call plug#end()
 
