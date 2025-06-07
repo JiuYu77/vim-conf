@@ -19,7 +19,8 @@ Plug 'skywind3000/asyncrun.vim'
 " IDE features
 "--------------
 Plug 'preservim/nerdtree'
-Plug 'preservim/tagbar'
+"Plug 'preservim/tagbar'
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -195,7 +196,7 @@ let g:startify_custom_footer=[
 
 "******************************************************************************************"
 "插件 fzf-funky: 配合 fzf在 文件里进行搜索的
-"映射一下 leader fu
+" leader fu 加载 fzf-funky
 nnoremap <Leader>fu :FzfFunky<Cr>
 "------------------------------------------------"
 "插件 fzf 快速搜索文件,若显示fzf executable not found就根据提示下载binary版本
@@ -203,10 +204,13 @@ let $FZF_DELFAULT_COMMAND='find -L'
 "1:Files [PATH]
 "2:Ag [PATTERN]
 "3.我的快捷键映射
-"按 control + p 就可以快速搜索
+"按 Leader + p 就可以快速搜索
 nnoremap <Leader>f :Files<CR>
-"按 control + g 可以快速全局模糊搜索（上面是只搜文件）
+"按 Leader + g 可以快速全局模糊搜索（上面是只搜文件）
 nnoremap <Leader>g :Ag<CR>
+
+"************************************ Yggdroot/LeaderF ************************************
+nnoremap <Leader>lf :LeaderfFunction<cr>
 
 "******************************************************************************************"
 "tagbar插件，用来在右侧展示 文件的整体结构视图 需要ctags
