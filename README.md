@@ -112,6 +112,7 @@ sudo apt install silversearcher-ag
 1. 方法1 需要科学上网
 
 - 添加代理，编辑 `coc-settings.json` 配置文件
+
 ```shell
 {
   "http.proxy": "http://127.0.0.1:8889",
