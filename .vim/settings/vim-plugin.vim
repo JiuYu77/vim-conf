@@ -315,6 +315,10 @@ let g:coc_global_extensions = [
 
 "******************************************************************************************"
 "语法检查的插件ale
+
+"启用 ALE 语法检查
+let g:ale_enabled = 1
+
 "始终开启标志列
 let g:ale_sign_column_always = 1
 let g:ale_set_highlights = 0
