@@ -54,10 +54,9 @@ set termguicolors
 "available: night, storm
 let g:tokyonight_style = 'storm'
 let g:tokyonight_enable_italic = 1
+let g:tokyonight_transparent_background = 1  "透明背景设置，1表示设置为透明 保持和 我的终端一样的颜色
 
 colorscheme tokyonight "配色
-
-let g:tokyonight_transparent_background = 1  "透明背景设置，1表示设置为透明 保持和 我的终端一样的颜色
 
 "******************************************************************************************"
 " ryanoasis/vim-devicons

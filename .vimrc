@@ -2,17 +2,15 @@
 "Vim9新增
 " 菜单，vim9以下版本需注释下面一行
 set wildoptions=pum
+
 " 菜单，vim9以下版本需注释下面一行
 set smoothscroll
+
 " 拼写检查z=  编辑文件的时候，按下Esc键，直接使用
 
 "------------------------------------------------------------------------------------------"
 " ctrl+p 前一个，ctrl+n 后一个，ctrl+y确认，ctrl+e取消补全
 
-"------------------------------------------------------------------------------------------"
-" source 加载其他配置文件
-source ~/.vim/settings/vim-plugin.vim
-source ~/.vim/settings/map.vim
 
 "******************************************************************************************"
 " buffer 缓冲区
@@ -23,8 +21,6 @@ source ~/.vim/settings/map.vim
 " bdelete   bd
 " bwipeout  bwipe
 
-"******************************************************************************************"
-"终端 term  terminal
 
 "******************************************************************************************"
 "分割出的新窗口的位置。包括终端位置
@@ -61,9 +57,9 @@ set cursorline
 set list
 "设置显示样式: eol(行尾)  tab(Tab键, 制表符)  trail(尾部空格)  extends(换行符)  precedes(换行符)
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
 " 在保存文件时自动删除尾部空格
 autocmd BufWritePre * %s/\s\+$//e
-
 
 "启用鼠标"
 set mouse=a
@@ -102,8 +98,7 @@ set backspace=indent,eol,start
 "try :set paste to turn off it
 set cin
 
-"自动语法高亮 syntax on和 syntax enable功能相同，只是syntax enable稍微优先"
-syntax on
+
 "高亮显示所有的匹配短语
 set hlsearch
 
@@ -112,6 +107,10 @@ set foldenable
 "set nofoldenable "禁用代码折叠
 set foldmethod=manual
 set foldcolumn=1
+
+
+"自动语法高亮 syntax on 和 syntax enable 功能相同，只是syntax enable稍微优先"
+syntax on
 
 
 "*****************************************************************
@@ -211,3 +210,16 @@ endfunc
 "自动提示,preview:是默认值，会自动选择第一个提示词；noselect:不自动选择第一个提示词
 "set completeopt=preview,menu
 "上面一句是Vim的默认设置,不用添加，如果要使用noselect则要添加这一句，并将preview改为noselect
+
+
+"------------------------------------------------------------------------------------------"
+" source 加载其他配置文件
+source ~/.vim/settings/vim-plugin.vim
+source ~/.vim/settings/map.vim
+
+
+"---- 注释颜色 ----
+"highlight Comment ctermfg=2 guifg=#26A63B
+highlight Comment ctermfg=2 guifg=#198A2C
+
+
