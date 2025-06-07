@@ -149,13 +149,11 @@ shell中执行 `vim` 命令，`coc.nvim` 会提示需要的 `clangd` 版本，�
 - 解压
 - 配置 clangd 路径
   - 方法1：在 `coc-settings.json`中配置
-
   ```shell
   {
       "clangd.path":"~/.config/coc/extensions/coc-clangd-data/download/clangd_15.0.3/bin/clangd"
   }
   ```
-
   - 方法2 将 `bin`目录 添加到 `PATH` 环境变量
 
   ```shell
