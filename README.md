@@ -143,7 +143,6 @@ shell中执行 `vim` 命令，`coc.nvim` 会提示需要的 `clangd` 版本，�
 ```plaintext
 [coc.nvim] clangd was not found on your PATH. :CocCommand clangd.install will install 19.1.2.
 ```
-
 1. 方法3
 - Github下载压缩包<br/>
 [clangd 官网  有 GitHub地址](https://clangd.llvm.org/installation)
