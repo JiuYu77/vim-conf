@@ -110,6 +110,7 @@ sudo apt install silversearcher-ag
 该插件通常需要较新版本的 `clangd`，**方法1**、**方法3** 可安装满足coc-clangd要求的版本，**方法2** apt使用的软件源 不一定更新及时更新软件版本(即clangd版本可能过低)。
 
 1. 方法1 需要科学上网
+
 - 添加代理，编辑 `coc-settings.json` 配置文件
 
 ```shell
