@@ -333,11 +333,11 @@ let g:ale_set_quickfix = 1
 "quickfix窗口显示警告或错误
 "let g:ale_open_list = 1
 
-"使用clang对c和c++进行语法检查，对python使用pylint进行语法检查
+"使用 clang 等，对 C 和 C++ 进行语法检查；使用 pylint 等，对 Python 进行语法检查
 let g:ale_linters = {
-\   'c': ['clang'],
-\   "c++": ['clang'],
-\   'python': ['pylint'],
+\   'c': ['gcc', 'clangd', 'clang'],
+\   "c++": ['gcc', 'clangd', 'clang'],
+\   'python': ['pylint', 'flake8', 'mypy'],
 \}
 
 "文件内容发生变化时不进行检查
