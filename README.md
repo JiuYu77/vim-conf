@@ -79,3 +79,55 @@ sudo apt install silversearcher-ag
 
 [Nerd Fonts 官网](https://www.nerdfonts.com/)
 
+## ale
+
+`ale` 是语法检查插件。
+
+[ale GitHub](https://github.com/dense-analysis/ale)
+
+**示例**：
+
+使用 clang 等，对 C 和 C++ 进行语法检查；使用 pylint 等，对 Python 进行语法检查
+```shell
+let g:ale_linters = {
+\   'c': ['gcc', 'clangd', 'clang'],
+\   "c++": ['gcc', 'clangd', 'clang'],
+\   'python': ['pylint', 'flake8', 'mypy'],
+\}
+```
+针对一种语言，安装了一个 可以`检查语法`的软件就已经可以，不一定要全部安装，以下是安装方式。
+
+安装 `clang`
+```shell
+sudo apt install clang-17  # 17是版本
+```
+安装 `clangd`
+```shell
+sudo apt install clangd-19
+```
+安装 `pylint`：
+```shell
+# 方法1
+sudo apt install pylint
+
+# 方法2：pip 安装 pylint，如果使用 python 虚拟环境
+pip install pylint
+```
+安装 `flake8`
+```shell
+# 方法1
+sudo apt install flake8
+
+# 方法2
+pip install flake8
+```
+安装 `mypy`
+```shell
+# 方法1
+sudo apt install mypy
+
+# 方法2
+pip install mypy
+```
+
+
