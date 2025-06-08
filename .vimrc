@@ -102,15 +102,11 @@ set cin
 "高亮显示所有的匹配短语
 set hlsearch
 
-"折叠设置; 符号: + 和 -; 可通过“鼠标”进行展开 或 折叠
+"折叠设置; 符号: + 和 -; 可通过“鼠标”进行展开 或 折叠; za 展开，zc 折叠
 set foldenable
 "set nofoldenable "禁用代码折叠
 set foldmethod=manual
 set foldcolumn=1
-
-
-"自动语法高亮 syntax on 和 syntax enable 功能相同，只是syntax enable稍微优先"
-syntax on
 
 
 "*****************************************************************
@@ -212,14 +208,16 @@ endfunc
 "上面一句是Vim的默认设置,不用添加，如果要使用noselect则要添加这一句，并将preview改为noselect
 
 
+"自动语法高亮 syntax on 和 syntax enable 功能相同，只是syntax enable稍微优先"
+syntax on
+
 "------------------------------------------------------------------------------------------"
 " source 加载其他配置文件
 source ~/.vim/settings/map.vim
 source ~/.vim/settings/vim-plugin.vim
 
 
-"---- 注释颜色 ----
-"highlight Comment ctermfg=2 guifg=#26A63B
-highlight Comment ctermfg=2 guifg=#198A2C
+"---- 自定义配色 ----
+colorscheme mytheme
 
 
