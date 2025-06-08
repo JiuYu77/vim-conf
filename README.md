@@ -151,6 +151,7 @@ sudo apt install clangd-19
   export PATH=$PATH:/lib/llvm-19/bin/
   ```
   - 方式3 设置软链接
+  ```shell
   sudo ln -s /lib/llvm-19/bin/clangd /usr/bin/clangd
   ```
 
