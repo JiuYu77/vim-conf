@@ -257,4 +257,23 @@ vim --version | grep python
 ```shell
 sudo apt install vim-python-jedi
 ```
+vim LeaderF插件 `:LeaderfInstallCExtension` 命令 报错
+```shell
+Beginning to compile C extension of Python3 ...
+running build
+running build_ext
+building 'fuzzyMatchC' extension
+gcc -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O2 -Wall -g -fstack-protector-strong -fstack-clash-protection -Wfor
+mat -Werror=format-security -fcf-protection -g -fwrapv -O2 -fPIC -I/usr/include/python3.12 -c fuzzyMatch.c -o build/temp
+.linux-x86_64-cpython-312/fuzzyMatch.o -std=c99
+fuzzyMatch.c:21:10: fatal error: Python.h: 没有那个文件或目录
+   21 | #include <Python.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+error: command '/usr/bin/gcc' failed with exit code 1
+```
+安装 Python 开发包，例如 `python3.12-dev`、`python3-dev` 不同`软件源`包名 可能有所区别
+```shell
+sudo apt install python3-dev
+```
 
