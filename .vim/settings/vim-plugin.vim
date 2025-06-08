@@ -29,10 +29,10 @@ Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
 Plug 'easymotion/vim-easymotion'
 
 "---- 智能代码提示 (自动补全) ----
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "---- 语法检查 ----
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 
 "---- Git ----
 Plug 'tpope/vim-fugitive'
@@ -342,20 +342,21 @@ let g:ale_set_quickfix = 1
 "quickfix窗口显示警告或错误
 "let g:ale_open_list = 1
 
-"使用 clang 等，对 C 和 C++ 进行语法检查；使用 pylint 等，对 Python 进行语法检查
-let g:ale_linters = {
-\   'c': ['gcc', 'clangd', 'clang'],
-\   "c++": ['gcc', 'clangd', 'clang'],
-\   'python': ['pylint', 'flake8', 'mypy'],
-\}
-
 "文件内容发生变化时不进行检查
 "let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_text_changed = 'always'
 "打开文件时不进行检查
 let g:ale_lint_on_enter = 0
 
 "如果安装了airline，默认在airline中是显示ale内容的，可以手动关闭,即设置为0
 "let g:airline#extensions#ale#enabled = 0
 
+"使用 clang 等，对 C 和 C++ 进行语法检查；使用 pylint 等，对 Python 进行语法检查
+let g:ale_linters = {
+\   'c': ['gcc', 'clangd', 'clang'],
+\   "cpp": ['gcc', 'g++', 'clangd', 'clang'],
+\   'python': ['pylint', 'flake8', 'mypy'],
+\}
+"let g:ale_cpp_cc_executable = 'g++'
 
 "******************************************************************************************"
