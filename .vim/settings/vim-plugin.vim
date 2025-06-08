@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 " Color Schemes
 "--------------
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'sheerun/vim-polyglot'
 
 "---- statusline ----
 Plug 'vim-airline/vim-airline'
@@ -48,7 +49,7 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 "******************************************************************************************"
-"truecolor,开启24bit的颜色
+"true color, 真彩色, 开启24bit的颜色
 set termguicolors
 
 "tokyonight-vim主题

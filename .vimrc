@@ -214,6 +214,7 @@ syntax on
 "------------------------------------------------------------------------------------------"
 " source 加载其他配置文件
 source ~/.vim/settings/map.vim
+
 source ~/.vim/settings/vim-plugin.vim
 
 
