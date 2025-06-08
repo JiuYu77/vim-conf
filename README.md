@@ -176,6 +176,10 @@ sudo apt install clangd-19
   export PATH=$PATH:$Clangd_PATH
   ```
 
+#### coc-snippets
+
+要求 `vim` 拥有 `Python` 支持？
+
 ### ale
 
 `ale` 是语法检查插件。
