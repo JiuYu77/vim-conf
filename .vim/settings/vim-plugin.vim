@@ -29,10 +29,10 @@ Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
 Plug 'easymotion/vim-easymotion'
 
 "---- 智能代码提示 (自动补全) ----
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "---- 语法检查 ----
-"Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 
 "---- Git ----
 Plug 'tpope/vim-fugitive'
@@ -78,7 +78,7 @@ let g:webdevicons_enable_startify = 1
 set laststatus=2 "永远显示状态栏
 
 "修改vim-airline的主题
-let g:airline_theme='dark'
+"let g:airline_theme='dark'
 "let g:airline_theme='tokyonight'
 
 ""vim-airline和vim-airline-themes配置
@@ -211,6 +211,7 @@ nnoremap <Leader>g :Ag<CR>
 
 "************************************ Yggdroot/LeaderF ************************************
 nnoremap <Leader>lf :LeaderfFunction<cr>
+nnoremap <Leader>lfi :LeaderfFile<cr>
 
 "******************************************************************************************"
 "tagbar插件，用来在右侧展示 文件的整体结构视图 需要ctags
