@@ -30,10 +30,10 @@ Plug 'tracyone/fzf-funky',{'on': 'FzfFunky'}
 Plug 'easymotion/vim-easymotion'
 
 "---- 智能代码提示 (自动补全) ----
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "---- 语法检查 ----
-"Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 
 "---- Git ----
 Plug 'tpope/vim-fugitive'
@@ -176,24 +176,9 @@ let g:startify_skiplist=[
 			\'^/tmp',
 			\]
 "可以自定义Header和Footer
-let g:startify_custom_header=[
-			\'^------------------------------------------------------^',
-			\'|       Game is the game and can not be reality!       |',
-			\'|                Still waters run deep!                |',
-			\"| Don't say it can't be done;explain what can be done. |",
-			\'*------------------------------------------------------*',
-			\'      o',
-			\'       o   ^__^',
-			\'        o  (oo)\________',
-			\'           (__)\        )\/\ ',
-			\'               ||-----w |',
-			\"               ||      ||",
-			\]
-let g:startify_custom_footer=[
-			\'+--------------------------------+',
-			\'|       Keep an open mind!       |',
-			\'+--------------------------------+',
-			\]
+" .vimrc 中加载文件：source ~/.vim/settings/ascii-picture.vim
+let g:startify_custom_header=g:startify_ascii_art
+let g:startify_custom_footer=g:pikachu_2_ascii_art
 
 "******************************************************************************************"
 "插件 fzf-funky: 配合 fzf在 文件里进行搜索的
