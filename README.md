@@ -129,16 +129,21 @@ sudo apt install silversearcher-ag
 该方法 可安装满足 `coc-clangd`要求版本的`clangd`，但 需要科学上网，且挂了梯子，速度也不一定好。
 
 2. 方法2
-
+- `apt` 安装
 ```shell
 sudo apt install clangd-19
 ```
-
-配置环境变量 `~/.bashrc`，因为coc-clangd 识别的是`clangd`可执行文件，clang-19 是 clangd的软链接
-
-```shell
-export PATH=$PATH:/lib/llvm-19/bin/
-```
+- 配置 clangd 路径：安装完成发现，`PATH`变量中存在的 `clang-19` 是 可执行文件`clangd` 的软链接，而 `coc-clangd` 识别的是`clangd`可执行文件
+  - 方式1 在 `coc-settings.json`中配置
+  ```shell
+  {
+      "clangd.path":"/lib/llvm-19/bin/clangd"
+  }
+  ```
+  - 方式2 配置环境变量 `~/.bashrc`
+  ```shell
+  export PATH=$PATH:/lib/llvm-19/bin/
+  ```
 
 shell中执行 `vim` 命令，`coc.nvim` 会提示需要的 `clangd` 版本，如
 
