@@ -300,6 +300,7 @@ let g:coc_global_extensions = [
 		\ 'coc-clangd',
 		\ 'coc-snippets',
 		\ 'coc-pyright',
+		\ 'coc-go',
 		"\ 'coc-java',
 		"\ 'coc-java-intellicode',
 		\]
