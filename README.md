@@ -246,18 +246,21 @@ pip install mypy
 
 [`LeaderF`](https://github.com/Yggdroot/LeaderF) 是一个高效的模糊查找器，要求 vim 支持 python 插件。
 
-查看 vim 是否支持 python
+查看 vim 是否支持 python:
 
 ```shell
 vim --version | grep python
 ```
+不支持：`-python`、`-python3`。
+支持：`+python`、`+python3`。
 
-`vim` 安装 python 支持
+`vim` 安装 python 支持:
 
 ```shell
 sudo apt install vim-python-jedi
 ```
-vim LeaderF插件 `:LeaderfInstallCExtension` 命令 报错
+
+vim LeaderF插件 `:LeaderfInstallCExtension` 命令 报错:
 ```shell
 Beginning to compile C extension of Python3 ...
 running build
@@ -272,7 +275,8 @@ fuzzyMatch.c:21:10: fatal error: Python.h: 没有那个文件或目录
 compilation terminated.
 error: command '/usr/bin/gcc' failed with exit code 1
 ```
-安装 Python 开发包，例如 `python3.12-dev`、`python3-dev` 不同`软件源`包名 可能有所区别
+
+安装 Python 开发包，例如 `python3.12-dev`、`python3-dev` 不同`软件源`包名 可能有所区别:
 ```shell
 sudo apt install python3-dev
 ```
