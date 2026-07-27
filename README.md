@@ -4,10 +4,10 @@
 git clone https://github.com/JiuYu77/vim-conf.git
 
 
-git clone -b vim https://github.com/JiuYu77/vim-conf.git path/vim
+git clone -b vim --single-branch https://github.com/JiuYu77/vim-conf.git path/vim
 
 
-git clone -b neovim-lua https://github.com/JiuYu77/vim-conf.git path/neovim-lua
+git clone -b neovim-lua --single-branch https://github.com/JiuYu77/vim-conf.git path/neovim-lua
 ```
 
 ```shell
@@ -21,7 +21,7 @@ git checkout vim  # git switch vim
 ### vim
 
 ```shell
-git clone -b vim https://github.com/JiuYu77/vim-conf.git ~/vim
+git clone -b vim --single-branch https://github.com/JiuYu77/vim-conf.git ~/vim
 mv ~/vim/.vimrc ~/vim/.vim ~/
 rm -rf ~/vim
 ```
@@ -29,7 +29,7 @@ rm -rf ~/vim
 ### neovim
 
 ```bash
-git clone -b neovim-lua https://github.com/JiuYu77/vim-conf.git ~/.config/nvim/
+git clone -b neovim-lua --single-branch https://github.com/JiuYu77/vim-conf.git ~/.config/nvim/
 ```
 
 ## Software 软件
