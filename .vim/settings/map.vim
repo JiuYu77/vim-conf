@@ -116,4 +116,9 @@ nnoremap tt :terminal ++rows=20<CR>
 "垂直term, 100 列
 nnoremap vt :vertical terminal ++cols=100<CR>
 
-
+"******************************************************************************************"
+" 删除行尾空白（空格）
+" 自定义 Ex 命令，执行 :TrimWhitespace 即可
+command! TrimWhitespace %s/\s\+$//e | nohlsearch
+" 快捷键：普通模式下按 <Leader>w
+nnoremap <leader>w :TrimWhitespace<CR>
